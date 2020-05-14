@@ -12,6 +12,8 @@ Bootstrap.servers - 127.0.0.1:9092
 ```
 ## Kafka - Putting items on a Topic
 https://towardsdatascience.com/kafka-python-explained-in-10-lines-of-code-800e3e07dad1
+```
 def write_to_kafka(allValues):
 	data = json.dumps(allValues)
 	producer.send('nuix-topic', data.encode('utf-8'))
+```
