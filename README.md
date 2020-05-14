@@ -3,25 +3,15 @@
 ```
 pip3 install flask
 pip3 install connexion
+pip3 install flask wtforms
 ```
-### Web Files that need updating based on OS
-Validate URL. 
+## Kakfa Setting for Nuix
 ```
-./WEB/static/js/stoplight.js
-const STOPLIGHT_SERVER_URL = 'http://localhost:5000/api/flags'
-const STOPLIGHT_SERVER_URL = 'http://{DNS_NAME}:5000/api/flags'
+Zookeeper - 127.0.0.1:2181
+Bootstrap.servers - 127.0.0.1:9092
 ```
-Validate the correct location of the alerts.json file.
-```
-./WEB/flags.py
-outputAlertsPath  = '/Users/stephenstewart/Documents/DEV/GIT/GraphPOC/WEB/data/alerts.json'
-outputAlertsPath  = 'F:/WEB/data/alerts.json'
-
-```
-
-### Starting the Python Web Server
-1. Change directory to the location of the server.py
-2. Start the server.py
-```
-pthon3 server.py
-```
+## Kafka - Putting items on a Topic
+https://towardsdatascience.com/kafka-python-explained-in-10-lines-of-code-800e3e07dad1
+def write_to_kafka(allValues):
+	data = json.dumps(allValues)
+	producer.send('nuix-topic', data.encode('utf-8'))
