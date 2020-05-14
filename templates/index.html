@@ -1,0 +1,112 @@
+
+<html>
+  <head>
+     <title>Nuix Contact Tracing Demo</title>
+     <link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+
+    <div class="container"><br>
+      <center>
+        <h2>Nuix Contact Tracing Demo</h2>
+      </center>
+    </div>
+
+    <div class=container"><br>
+    <div class="row align-items-center justify-content-center">
+    <div class="col-md-4">
+     <form  action="" method="post" role="form">
+        {{ form.csrf }}
+        <div class="form-group">
+		 <h3>Your Contact Information</h3>  
+		<label for="lastName">Last Name:</label>
+		<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name?">
+		<br>
+		<label for="firstName">First Name:</label>
+		<input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name?">
+		<br>
+		<label for="middleName">Middle Name:</label>
+		<input type="text" class="form-control" id="middleName" name="middleName" placeholder="Middle Name?">
+		<br>
+		<label for="phoneNumber">Phone Number</label>
+		<input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone Number?">
+		<br>
+		<label for="email">Email:</label>
+		<input type="text" class="form-control" id="email" name="email" placeholder="Your email address.">
+		<br>
+		<h3>Your Home Address Informaton</h3>  
+		<label for="homeStreetName">Street Name:</label>
+		<input type="text" class="form-control" id="homeStreetName" name="homeStreetName" placeholder="Street Name?">
+		<br>
+		<label for="homeCity">City:</label>
+		<input type="text" class="form-control" id="homeCity" name="homeCity" placeholder="City?">
+		<br>
+		<label for="homeState">State</label>
+		<input type="text" class="form-control" id="homeState" name="homeState" placeholder="State?">
+		<br>
+		<label for="homeZip">Zip Code</label>
+		<input type="text" class="form-control" id="homeZip" name="homeZip" placeholder="Zip Code?">
+		<br>
+		<h3>Who have you been in contact with?</h3>
+		<label for="c1_lastName">Last Name:</label>
+		<input type="text" class="form-control" id="c1_lastName" name="c1_lastName" placeholder="Last Name?">
+		<br>
+		<label for="c1_firstName">First Name:</label>
+		<input type="text" class="form-control" id="c1_firstName" name="c1_firstName" placeholder="First Name?">
+		<br>
+		<label for="c1_phoneNumber">Phone Number</label>
+		<input type="text" class="form-control" id="c1_phoneNumber" name="c1_phoneNumber" placeholder="Phone Number?">
+		<br>
+		<h3>Where were you in contact with them?</h3>
+		<label for="c1_Description">Describe how you came in contact.</label>
+		<input type="text" class="form-control" id="c1_Description" name="c1_Description" placeholder="Description of Contact">
+		<br>
+		<label for="c1_location_StreetName">Street Name:</label>
+		<input type="text" class="form-control" id="c1_location_StreetName" name="c1_location_StreetName" placeholder="Street Name?">
+		<br>
+		<label for="c1_location_City">City:</label>
+		<input type="text" class="form-control" id="c1_location_City" name="c1_location_City" placeholder="City?">
+		<br>
+		<label for="c1_location_State">State</label>
+		<input type="text" class="form-control" id="c1_location_State" name="c1_location_State" placeholder="State?">
+		<br>
+		<label for="c1_location_Zip">Zip Code</label>
+		<input type="text" class="form-control" id="c1_location_Zip" name="c1_location_Zip" placeholder="Zip Code?">
+		<br>
+	</div>
+	<br>													   
+	<center>
+		<button type="submit" class="btn btn-success">Submit</button>
+	</center>
+	</form>
+
+      <br>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+
+        {% for message in messages %}
+            {% if "Error" not in message[1]: %}
+                <div class="alert alert-info">
+                <strong>Success! </strong> {{ message[1] }}
+                </div>
+            {% endif %}
+
+            {% if "Error" in message[1]: %}
+                <div class="alert alert-danger">
+                <strong>Error: </strong> {{ message[1] }}
+                </div>
+            {% endif %}
+        {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+    </div>
+    <br>
+    </div>
+    </div>
+  </body>
+</html>

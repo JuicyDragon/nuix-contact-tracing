@@ -1,0 +1,19 @@
+{
+    "firstName": "Stephen",
+    "lastName": "Stewart",
+    "middleName": "Land",
+    "phoneNumber": "2154303098",
+    "email": "stephen@nuix.com",
+    "homeStreetName": "1453 Pepper Road",
+    "homeCity": "Jenkintown",
+    "homeState": "Pennsylvania",
+    "homeZip": "19046-2322",
+    "c1_lastName": "Jenkinson",
+    "c1_firstName": "Jenkinson",
+    "c1_phoneNumber": "2672267079",
+    "c1_Description": "At home and all around...",
+    "c1_location_StreetName": "1453 Pepper Road",
+    "c1_location_City": "Jenkintown",
+    "c1_location_State": "Pennsylvania",
+    "c1_location_Zip": "19046-2322"
+}

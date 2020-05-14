@@ -1,0 +1,21 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+#my-table-flags {
+	border-collapse: collapse;
+}
+
+#my-table-flags > tr > td {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+#my-table-stats {
+	border-collapse: collapse;
+}
+
+#my-table-stats > tr > td {
+    padding: 8px;
+}
