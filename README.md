@@ -34,7 +34,7 @@ https://blog.ruanbekker.com/blog/2018/05/27/web-forms-with-python-flask-and-the-
 ```
 {install_directory}/bin/windows>zookeeper-server-start.bat "{install_directory}\\config\\zookeeper.properties
 ```
-6. Start Kaka
+6. Start Kafka
 ```
 {install_directory}/bin/windows>zookeeper-server-start.bat "{install_directory}\\config\\server.properties
 ```
