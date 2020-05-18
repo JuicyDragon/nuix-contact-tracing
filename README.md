@@ -4,6 +4,7 @@
 pip3 install flask
 pip3 install connexion
 pip3 install flask wtforms
+pip3 install kafka
 ```
 ## Kakfa Setting for Nuix
 Kafka Installation / Configuration:
