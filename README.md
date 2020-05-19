@@ -10,6 +10,16 @@ pip3 install kafka-python
 ## Kakfa Setting for Nuix
 Kafka Installation / Configuration:
 https://confluence.nuix.com/display/NR/Kafka+Installation
+
+## Kafka Start-up Commands for a Mac/Linux
+From the Kafka install directory
+```
+./bin/zookeeper-server-start.sh config/zookeeper.properties
+./bin/kafka-server-start.sh config/server.properties
+./bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 2 --topic nuix-topic
+```
+
+## Nuix Workstation Case Configuration Settings
 ```
 Zookeeper - 127.0.0.1:2181
 Bootstrap.servers - 127.0.0.1:9092
@@ -23,6 +33,8 @@ def write_to_kafka(allValues):
 ```
 ## Python Flask Tutorial I copied.
 https://blog.ruanbekker.com/blog/2018/05/27/web-forms-with-python-flask-and-the-wtforms-module-with-bootstrap/
+
+
 
 
 ## Getting Kafka Running on a Windows Machine.
