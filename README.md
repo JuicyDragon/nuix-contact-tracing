@@ -35,14 +35,13 @@ def write_to_kafka(allValues):
 https://blog.ruanbekker.com/blog/2018/05/27/web-forms-with-python-flask-and-the-wtforms-module-with-bootstrap/
 
 
-
+## NOTE - Launch the Command Prompt as an Administrator.
 
 ## Getting Kafka Running on a Windows Machine.
 1. Download https://www.apache.org/dyn/closer.cgi?path=/kafka/1.0.0/kafka_2.11-1.0.0.tgz
 2. Upzip to an easily accessible location
 3. Update the /config/zookeeper.properties dataDir path to a correct locally accessible path eg. dataDir:G:\\kafka\\data
-4. Update the /config/server.properties log.dirs path to a correct, locally accessible path eg. log.dirs=G:\\kakfa\\tmp\\logs
-5. Start Zookeeper
+4. Update the /config
 ```
 {install_directory}/bin/windows>zookeeper-server-start.bat "{install_directory}\\config\\zookeeper.properties
 ```
