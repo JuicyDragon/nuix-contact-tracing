@@ -43,11 +43,11 @@ https://blog.ruanbekker.com/blog/2018/05/27/web-forms-with-python-flask-and-the-
 3. Update the /config/zookeeper.properties dataDir path to a correct locally accessible path eg. dataDir:G:\\kafka\\data
 4. Update the /config/server.properties log.dirs path to a correct locally accessible path eg. log.dirs:G:\\kafka\\tmp\\logs
 ```
-{install_directory}/bin/windows>zookeeper-server-start.bat "{install_directory}\\config\\zookeeper.properties
+{install_directory}/bin/windows>zookeeper-server-start.bat "{install_directory}\\config\\zookeeper.properties"
 ```
 6. Start Kafka
 ```
-{install_directory}/bin/windows>zookeeper-server-start.bat "{install_directory}\\config\\server.properties
+{install_directory}/bin/windows>kafka-server-start.bat "{install_directory}\\config\\server.properties"
 ```
 7. Create a Topic
 ```
