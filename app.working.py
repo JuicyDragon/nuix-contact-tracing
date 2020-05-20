@@ -5,7 +5,7 @@ from wtforms import Form, TextField, TextAreaField, validators, StringField, Sub
 import json
 from kafka import KafkaProducer
 
-producer = KafkaProducer(bootstrap_servers=['localhost:9092'])
+producer = KafkaProducer(bootstrap_servers=['kafka:9092'])
 
 DEBUG = True
 app = Flask(__name__)
